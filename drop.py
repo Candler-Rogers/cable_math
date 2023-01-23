@@ -12,6 +12,10 @@ class Drop():
         cable_type = cable_type(length)
         #splitter details how many outlets
         self.splitter = splitter
+        starting_TX = round(random.uniform(37.9,47.9),1)
+        starting_low_RX = round(random.uniform(3.5,12.5),1)
+        starting_hi_RX = round(random.uniform(8.9,19.9),1)
+        
 
 
 #sets constant key:values for known dB loss per 100 ft on RG-6 and RG-11
@@ -25,10 +29,16 @@ loss_table = {
 }
 
 def cable_type(length):
-    if length
+    if length > 150:
+        return 'RG-11'
+    return "RG-6"
+    
+def get_attenuation(footage, loss_per_100_feet):
+    """given a cable length, and a known loss value, returns total loss"""
+    return footage/100*loss_per_100_feet
 
 drop_instance = Drop(random.randint(20,250),random.randint(1,4))
 
 
 def build_drop(drop_instance):
-    
+    pass
