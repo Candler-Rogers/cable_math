@@ -16,6 +16,8 @@ class Drop():
         starting_low_RX = round(random.uniform(3.5,12.5),1)
         starting_hi_RX = round(random.uniform(8.9,19.9),1)
         
+   def get_GB():
+    pass
 
 
 #sets constant key:values for known dB loss per 100 ft on RG-6 and RG-11
@@ -42,3 +44,14 @@ drop_instance = Drop(random.randint(20,250),random.randint(1,4))
 
 def build_drop(drop_instance):
     pass
+
+def math_practice():
+    """main loop for the practice half of the program as opposed to future "quiz" loop"""
+    while True:
+        start = input("\nTo create the drop system enter 'Y'. To Quit enter 'Q': ")
+        if start.lower() == "y":
+            build_drop()
+        if start.lower() == "q":
+            sys.exit()
+        else:
+            print("Invalid input. Try again")
