@@ -39,10 +39,8 @@ def get_attenuation(footage, loss_per_100_feet):
     """given a cable length, and a known loss value, returns total loss"""
     return footage/100*loss_per_100_feet
 
-drop_instance = Drop(random.randint(20,250),random.randint(1,4))
-
-
-def build_drop(drop_instance):
+def build_drop():
+    drop_instance = Drop(random.randint(20,250),random.randint(1,4))
     pass
 
 def math_practice():
