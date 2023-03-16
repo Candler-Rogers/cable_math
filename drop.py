@@ -16,7 +16,8 @@ class Drop():
         starting_low_RX = round(random.uniform(3.5,12.5),1)
         starting_hi_RX = round(random.uniform(8.9,19.9),1)
         
-   def get_GB():
+   def get_GB(tap_level, loss_factor):
+    #
     pass
 
 
